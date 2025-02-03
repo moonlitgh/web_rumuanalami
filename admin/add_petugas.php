@@ -14,6 +14,8 @@ $username = $_POST['username'];
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 $nama_lengkap = $_POST['nama_lengkap'];
 $no_wa = $_POST['no_wa'];
+$no_rekening = $_POST['no_rekening'];
+$nama_bank = $_POST['nama_bank'];
 
 // Format nomor WhatsApp
 $formatted_wa = preg_replace('/[^0-9]/', '', $no_wa); // Hapus semua karakter non-angka
@@ -37,8 +39,8 @@ if($result->num_rows > 0) {
 }
 
 // Insert new petugas
-$stmt = $conn->prepare("INSERT INTO petugas (username, password, nama_lengkap, no_wa, link_page) VALUES (?, ?, ?, ?, ?)");
-$stmt->bind_param("sssss", $username, $password, $nama_lengkap, $formatted_wa, $link_page);
+$stmt = $conn->prepare("INSERT INTO petugas (username, password, nama_lengkap, no_wa, no_rekening, nama_bank, link_page) VALUES (?, ?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("sssssss", $username, $password, $nama_lengkap, $formatted_wa, $no_rekening, $nama_bank, $link_page);
 
 if($stmt->execute()) {
     // Create directory if not exists
@@ -49,12 +51,33 @@ if($stmt->execute()) {
     // Create petugas page
     $template = file_get_contents('../index.php');
     
+    // Tambahkan path relatif ke config.php
+    $config_path = "require_once('../config.php');"; // Path relatif dari folder p/
+    $template = str_replace("require_once('config.php');", $config_path, $template);
+    
+    // Update semua path asset
+    $template = str_replace('src="asset/', 'src="../asset/', $template);
+    $template = str_replace('src="js/', 'src="../js/', $template);
+    $template = str_replace('href="css/', 'href="../css/', $template);
+    
+    // Update path video testimonial
+    $template = str_replace('src="<?= htmlspecialchars($testi[\'video_path\']', 'src="../<?= htmlspecialchars($testi[\'video_path\']', $template);
+    
+    // Update path untuk file AJAX Raja Ongkir
+    $template = str_replace('"dataprovinsi.php"', '"../dataprovinsi.php"', $template);
+    $template = str_replace('"datadistrik.php"', '"../datadistrik.php"', $template);
+    $template = str_replace('"datakurir.php"', '"../datakurir.php"', $template);
+    $template = str_replace('"datapaket.php"', '"../datapaket.php"', $template);
+    
     // Modify WhatsApp link
     $template = preg_replace(
         '/https:\/\/wa\.me\/[0-9]+/',
         'https://wa.me/' . $formatted_wa,
         $template
     );
+    
+    // Update form action untuk proses_order
+    $template = str_replace('action="proses_order.php"', 'action="../proses_order.php"', $template);
     
     // Simpan file di folder p/
     $full_path = '../' . $link_page;

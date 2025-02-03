@@ -15,7 +15,7 @@ $base_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : 
 // $base_url .= "/nama-folder"; // Uncomment dan sesuaikan jika perlu
 
 // Ambil daftar petugas
-$query = "SELECT id, username, nama_lengkap, no_wa, link_page FROM petugas";
+$query = "SELECT id, username, nama_lengkap, no_wa, no_rekening, nama_bank, link_page FROM petugas";
 $result = $conn->query($query);
 $petugas_list = [];
 while($row = $result->fetch_assoc()) {
@@ -78,6 +78,8 @@ while($row = $result->fetch_assoc()) {
                             <th>Username</th>
                             <th>Nama Lengkap</th>
                             <th>No. WhatsApp</th>
+                            <th>No. Rekening</th>
+                            <th>Bank</th>
                             <th>Link Page</th>
                             <th>Aksi</th>
                         </tr>
@@ -88,6 +90,8 @@ while($row = $result->fetch_assoc()) {
                             <td><?= htmlspecialchars($petugas['username']) ?></td>
                             <td><?= htmlspecialchars($petugas['nama_lengkap']) ?></td>
                             <td><?= htmlspecialchars($petugas['no_wa']) ?></td>
+                            <td><?= htmlspecialchars($petugas['no_rekening']) ?></td>
+                            <td><?= htmlspecialchars($petugas['nama_bank']) ?></td>
                             <td>
                                 <span class="copy-link" onclick="copyToClipboard('<?= $base_url . '/' . $petugas['link_page'] ?>')">
                                     <?= $base_url . '/' . $petugas['link_page'] ?>
@@ -134,6 +138,14 @@ while($row = $result->fetch_assoc()) {
                         <div class="mb-3">
                             <label class="form-label">No. WhatsApp</label>
                             <input type="text" class="form-control" name="no_wa" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Nomor Rekening</label>
+                            <input type="text" class="form-control" name="no_rekening" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Nama Bank</label>
+                            <input type="text" class="form-control" name="nama_bank" required>
                         </div>
                     </form>
                 </div>

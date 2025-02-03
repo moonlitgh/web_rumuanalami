@@ -10,7 +10,7 @@ if(!isset($_SESSION['admin_logged_in'])) {
 // Ambil data petugas berdasarkan ID
 if(isset($_GET['id'])) {
     $id = (int)$_GET['id'];
-    $stmt = $conn->prepare("SELECT id, username, nama_lengkap, no_wa FROM petugas WHERE id = ?");
+    $stmt = $conn->prepare("SELECT id, username, nama_lengkap, no_wa, no_rekening, nama_bank FROM petugas WHERE id = ?");
     $stmt->bind_param("i", $id);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -70,6 +70,16 @@ if(isset($_GET['id'])) {
                     <div class="mb-3">
                         <label class="form-label">No. WhatsApp</label>
                         <input type="text" class="form-control" name="no_wa" value="<?= htmlspecialchars($petugas['no_wa']) ?>" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Nomor Rekening</label>
+                        <input type="text" class="form-control" name="no_rekening" value="<?= htmlspecialchars($petugas['no_rekening']) ?>" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Nama Bank</label>
+                        <input type="text" class="form-control" name="nama_bank" value="<?= htmlspecialchars($petugas['nama_bank']) ?>" required>
                     </div>
 
                     <div class="d-flex gap-2">

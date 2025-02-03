@@ -17,6 +17,13 @@ if(!$order) {
     header("Location: index.php");
     exit();
 }
+
+// Get petugas data for the order
+$stmt = $conn->prepare("SELECT p.* FROM orders o JOIN petugas p ON o.petugas_id = p.id WHERE o.id = ?");
+$stmt->bind_param("i", $order_id);
+$stmt->execute();
+$result = $stmt->get_result();
+$petugas = $result->fetch_assoc();
 ?>
 
 <!DOCTYPE html>
@@ -119,13 +126,13 @@ if(!$order) {
             <p>Silakan lakukan pembayaran ke rekening berikut:</p>
             
             <div class="bank-details">
-                <p><strong>Bank BCA</strong></p>
-                <p>No. Rekening: <span id="rekening">1234567890</span> 
+                <p><strong>Bank <?= htmlspecialchars($petugas['nama_bank']) ?></strong></p>
+                <p>No. Rekening: <span id="rekening"><?= htmlspecialchars($petugas['no_rekening']) ?></span> 
                     <button class="copy-button" onclick="copyToClipboard('rekening')">
                         <i class="bi bi-clipboard"></i> Copy
                     </button>
                 </p>
-                <p>Atas Nama: PT D-Gassvit Indonesia</p>
+                <p>Atas Nama: <?= htmlspecialchars($petugas['nama_lengkap']) ?></p>
                 <p>Jumlah: Rp <?= number_format($order['total_pembayaran'], 0, ',', '.') ?>
                     <button class="copy-button" onclick="copyToClipboard('nominal')">
                         <i class="bi bi-clipboard"></i> Copy
@@ -135,7 +142,7 @@ if(!$order) {
 
             <div class="text-center mt-4">
                 <p>Setelah melakukan pembayaran, silakan konfirmasi melalui WhatsApp:</p>
-                <a href="https://wa.me/6281234567890?text=Halo%20Admin%2C%20saya%20ingin%20konfirmasi%20pembayaran%20untuk%20Order%20ID%20%23<?= $order['id'] ?>" 
+                <a href="https://wa.me/<?= $petugas['no_wa'] ?>?text=Halo%20Admin%2C%20saya%20ingin%20konfirmasi%20pembayaran%20untuk%20Order%20ID%20%23<?= $order['id'] ?>" 
                    class="whatsapp-button">
                     <i class="bi bi-whatsapp"></i> Konfirmasi Pembayaran
                 </a>
@@ -149,9 +156,9 @@ if(!$order) {
         function copyToClipboard(type) {
             let text = '';
             if(type === 'rekening') {
-                text = '1234567890';
+                text = '<?= htmlspecialchars($petugas['no_rekening']) ?>';
             } else if(type === 'nominal') {
-                text = '<?= $order['total_pembayaran'] ?>';
+                text = '<?= number_format($order['total_pembayaran'], 0, ',', '.') ?>';
             }
             
             navigator.clipboard.writeText(text).then(() => {

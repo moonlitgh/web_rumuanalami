@@ -40,173 +40,125 @@
         /* CSS untuk Hero Section */
 /* CSS untuk Highlight Section */
         .highlight-section {
-            padding: 40px 20px;
-            background-color: #f8f9fa;
-            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
         }
 
         .highlight-box {
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-left: 5px solid #28a745;
+            border: 2px dashed #28a745; /* Garis putus-putus merah */
+            padding: 20px;
+            background-color: white; /* Latar belakang putih */
+            max-width: 600px; /* Lebar maksimum */
+            box-shadow: 0 4px 10px rgba(239, 59, 19, 0.958); /* Efek bayangan */
         }
 
-        .highlight-text {
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        .highlight-main {
-            display: block;
-            color: #28a745;
-            font-size: 32px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .highlight-sub {
-            display: block;
-            color: #666;
-            font-size: 24px;
-            font-weight: 500;
+        .highlight-box p {
+            color: #ff6347; /* Teks berwarna merah */
+            font-size: 18px; /* Ukuran font */
+            text-align: center; /* Teks di tengah */
         }
         /* CSS untuk Experience Section */
         .experience-section {
-            padding: 40px 20px;
-            background-color: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin: 30px auto;
-            max-width: 1000px;
+            text-align: center; /* Teks di tengah */
+            padding: 20px 0; /* Padding atas dan bawah */
         }
 
-        .main-question {
-            animation: fadeInScale 1s ease-out;
+        .experience-section h2 {
+            font-size: 24px; /* Ukuran font untuk judul */
+            margin-bottom: 10px; /* Jarak bawah judul */
         }
 
-        .sub-question {
-            animation: slideInRight 1s ease-out;
+        .experience-section p {
+            font-size: 18px; /* Ukuran font untuk deskripsi */
+            margin-bottom: 20px; /* Jarak bawah deskripsi */
         }
 
-        .symptom-list li {
-            transition: transform 0.3s ease;
-            border-left: 5px solid #28a745;
+        .experience-section ul {
+            list-style-type: none; /* Menghilangkan bullet */
+            padding: 0; /* Menghilangkan padding */
         }
 
-        .symptom-list li:hover {
-            transform: translateX(10px);
-        }
-
-        .symptom-list li:nth-child(1) { animation-delay: 0.1s; }
-        .symptom-list li:nth-child(2) { animation-delay: 0.2s; }
-        .symptom-list li:nth-child(3) { animation-delay: 0.3s; }
-        .symptom-list li:nth-child(4) { animation-delay: 0.4s; }
-        .symptom-list li:nth-child(5) { animation-delay: 0.5s; }
-
-        @keyframes fadeInScale {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+        .experience-section li {
+            font-size: 16px; /* Ukuran font untuk item list */
+            margin: 10px 0; /* Jarak antar item */
         }
 
         /* CSS untuk Alert Section */
 /* CSS untuk Alert Section */
 /* CSS untuk Alert Section */
 .alert-section {
-    padding: 40px 20px;
-    margin: 30px 0;
+    text-align: center; /* Teks di tengah */
+    padding: 20px 0; /* Padding atas dan bawah */
+}
+
+.alert-section h2 {
+    font-size: 24px; /* Ukuran font untuk judul */
+    margin-bottom: 10px; /* Jarak bawah judul */
 }
 
 .alert-box {
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border: 3px solid #28a745;
+    border: 2px dashed #28a745; /* Garis putus-putus merah */
+    padding: 20px; /* Padding dalam box */
+    background-color: white; /* Latar belakang putih */
+    display: inline-block; /* Agar box tidak memenuhi lebar penuh */
+    margin: 20px 0; /* Jarak atas dan bawah box */
+    box-shadow: 0 4px 10px rgba(239, 59, 19, 0.958); /* Efek bayangan pada garis putus-putus */
 }
 
+.alert-box p {
+    font-size: 18px; /* Ukuran font untuk teks dalam box */
+    color: #ff6347; /* Warna teks */
+    margin: 0; /* Menghilangkan margin */
+}
+
+.alert-section p:last-of-type {
+    font-size: 16px; /* Ukuran font untuk teks tambahan */
+}
+
+/* CSS untuk Alert Section */
 .alert-text {
-    margin: 0;
-    line-height: 1.6;
+    
+    color: #ff6347; /* Mengubah warna teks menjadi merah */
 }
 
-.alert-icon {
-    display: block;
-    font-size: 48px;
-    margin-bottom: 15px;
+.highlight-text {
+    color: #ff6347; /* Mengubah warna teks menjadi merah */
+    text-align: center; /* Memastikan teks terpusat */
 }
 
-.alert-main {
-    display: block;
-    color: #28a745;
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.alert-sub {
-    display: block;
-    color: #666;
-    font-size: 24px;
-    font-weight: 500;
+/* Tambahkan media query untuk tampilan mobile */
+@media (max-width: 768px) {
+    .highlight-text {
+        text-align: center; /* Memastikan teks terpusat di perangkat mobile */
+    }
 }
 
 /* CSS untuk Solution Section */
 .solution-section {
-    padding: 40px 20px;
-    margin: 30px 0;
+    text-align: center; /* Teks di tengah */
+    padding: 20px 0; /* Padding atas dan bawah */
+}
+
+.solution-title {
+    color: #28a745; /* Merah tua */
+    font-weight: bold; /* Teks tebal */
+    font-size: 28px; /* Ukuran font */
 }
 
 .solution-box {
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 2px dashed #28a745; /* Garis putus-putus merah */
+    padding: 20px; /* Padding dalam box */
+    background-color: white; /* Latar belakang putih */
+    display: inline-block; /* Agar box tidak memenuhi lebar penuh */
+    margin: 20px 0; /* Jarak atas dan bawah box */
+    box-shadow: 0 4px 10px rgba(239, 59, 19, 0.958); /* Efek bayangan */
 }
 
 .solution-box h2 {
-    color: #28a745;
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-weight: bold; /* Teks tebal */
+    color: #ff6347; /* Warna teks */
+    font-size: 24px; /* Ukuran font */
 }
 
 .video-grid {
@@ -535,75 +487,79 @@
 
 /* CSS untuk Notification Section */
 .notification-section {
-    max-width: 1000px;
-    margin: 40px auto;
-    text-align: center;
-    background-color: #fff3cd;
-    padding: 30px;
-    border-radius: 15px;
-    border: 3px dashed #ff6347;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 2px dashed #28a745; /* Garis putus-putus merah */
+    padding: 20px; /* Padding dalam box */
+    background-color: white; /* Latar belakang putih */
+    box-shadow: 0 4px 10px rgba(239, 59, 19, 0.958); /* Efek bayangan */
+    text-align: center; /* Teks di tengah */
+    margin: 20px 0; /* Jarak atas dan bawah */
 }
 
 .notification-section h1 {
-    color: #ff6347;
-    font-size: 28px;
-    font-weight: bold;
-    margin: 0;
-    line-height: 1.4;
+    color: #ff6347; /* Warna teks */
+    font-weight: bold; /* Teks tebal */
+    font-size: 24px; /* Ukuran font */
 }
 
 /* CSS untuk Price Section */
 .price-section {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
+    text-align: center; /* Teks di tengah */
+    padding: 20px 0; /* Padding atas dan bawah */
 }
 
 .promo-text h2 {
-    color: #28a745;
-    font-size: 32px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 30px;
+    color: #28a745; /* Warna teks merah */
+    font-weight: bold; /* Teks tebal */
+    font-size: 24px; /* Ukuran font */
+    margin: 20px 0; /* Jarak atas dan bawah */
 }
 
 .price-list {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    list-style-type: none; /* Menghilangkan bullet */
+    padding: 0; /* Menghilangkan padding */
 }
 
 .price-list li {
-    font-size: 24px;
-    padding: 15px 0;
-    color: #444;
-    border-bottom: 2px dashed rgba(40, 167, 69, 0.2);
-}
-
-.price-list li:last-child {
-    border-bottom: none;
+    font-size: 16px; /* Ukuran font untuk item list */
+    margin: 10px 0; /* Jarak antar item */
 }
 
 .checkmark {
-    color: #28a745;
-    margin-right: 10px;
+    color: green; /* Warna centang */
+    margin-right: 10px; /* Jarak antara centang dan teks */
+}
+
+.border-bottom {
+    border-bottom: 1px solid black; /* Garis bawah */
+    padding-bottom: 5px; /* Jarak antara teks dan garis */
 }
 
 .promo-box {
-    margin-top: 30px;
-    background-color: #fff3cd;
-    padding: 20px;
-    border-radius: 15px;
-    border: 3px dashed #ff6347;
+    border: 2px dashed #28a745; /* Garis putus-putus merah */
+    padding: 20px; /* Padding dalam box */
+    background-color: white; /* Latar belakang putih */
+    box-shadow: 0 4px 10px rgba(239, 59, 19, 0.958); /* Efek bayangan */
+    margin-top: 20px; /* Jarak atas */
 }
 
 .promo-box h2 {
-    color: #ff6347;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0;
+    color: #ff6347; /* Warna teks */
+    font-weight: bold; /* Teks tebal */
+    font-size: 24px; /* Ukuran font */
+}
+
+.promo-box {
+    border: 2px dashed #28a745; /* Garis putus-putus merah */
+    padding: 20px; /* Padding dalam box */
+    background-color: white; /* Latar belakang putih */
+    box-shadow: 0 4px 10px rgba(239, 59, 19, 0.958); /* Efek bayangan */
+    margin-top: 20px; /* Jarak atas */
+}
+
+.promo-box h2 {
+    color: #ff6347; /* Warna teks */
+    font-weight: bold; /* Teks tebal */
+    font-size: 24px; /* Ukuran font */
 }
 
 /* CSS untuk Order Section */
@@ -877,329 +833,19 @@ select:disabled {
     cursor: not-allowed;
 }
 
-/* Tambahkan style untuk countdown timer */
-.countdown-timer {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 30px 0;
-}
-
-.countdown-item {
-    background: #28a745;
-    color: white;
-    padding: 15px;
-    border-radius: 10px;
-    min-width: 100px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
-}
-
-.countdown-item span {
-    display: block;
-}
-
-.countdown-item span:first-child {
-    font-size: 32px;
-    font-weight: bold;
-}
-
-.countdown-item .label {
-    font-size: 16px;
-    margin-top: 5px;
-}
-
-@media (max-width: 768px) {
-    .countdown-item {
-        min-width: 80px;
-        padding: 10px;
-    }
-    
-    .countdown-item span:first-child {
-        font-size: 24px;
-    }
-    
-    .countdown-item .label {
-        font-size: 14px;
-    }
-}
-.benefits-section {
-    padding: 50px 20px;
-    background-color: #f8f9fa;
-}
-
-.benefits-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.benefits-title {
-    text-align: center;
-    color: #28a745;
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 40px;
-}
-
-.benefits-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin-bottom: 40px;
-}
-
-.benefit-item {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    background: #f8f9fa;
-    border-radius: 10px;
-    border-left: 4px solid #28a745;
-    transition: transform 0.3s ease;
-}
-
-.benefit-item:hover {
-    transform: translateX(10px);
-}
-
-.benefit-icon {
-    font-size: 24px;
-    margin-right: 15px;
-}
-
-.benefit-item p {
-    margin: 0;
-    font-size: 18px;
-    color: #444;
-}
-
-.usage-section {
-    margin-top: 40px;
-    padding-top: 40px;
-    border-top: 2px dashed #28a745;
-}
-
-.usage-title {
-    text-align: center;
-    color: #28a745;
-    font-size: 28px;
-    margin-bottom: 30px;
-}
-
-.usage-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.usage-card {
-    background: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    border: 2px solid #28a745;
-}
-
-.usage-card h4 {
-    color: #28a745;
-    margin-bottom: 15px;
-    font-size: 20px;
-}
-
-.usage-highlight {
-    font-size: 32px;
-    font-weight: bold;
-    color: #28a745;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.product-info {
-    text-align: center;
-    background: #fff3cd;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 30px;
-    border: 2px dashed #ff6347;
-}
-
-.pill-icon {
-    font-size: 32px;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.product-info p {
-    margin: 0;
-    font-size: 20px;
-    color: #444;
-}
-
-@media (max-width: 768px) {
-    .benefits-title {
-        font-size: 26px;
-    }
-    
-    .benefit-item p {
-        font-size: 16px;
-    }
-    
-    .usage-title {
-        font-size: 24px;
-    }
-    
-    .usage-highlight {
-        font-size: 28px;
-    }
-    
-    .product-info p {
-        font-size: 18px;
-    }
-}
-.hero {
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-}
-
-.hero .cta-box {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: #ffffff;
-    padding: 40px 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border: 3px solid #28a745;
-}
-
-.hero-title {
-    color: #28a745;
-    font-size: 42px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-}
-
-.cta-price {
-    color: #ff6347;
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.cta-text {
-    color: #666;
-    font-size: 24px;
-    margin-bottom: 25px;
-}
-
-.cta-divider {
-    margin: 30px 0;
-    color: #28a745;
-    font-size: 24px;
-}
-
-.cta-heading {
-    color: #28a745;
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.cta-subtext {
-    color: #666;
-    font-size: 22px;
-    margin-bottom: 30px;
-}
-
-.cta-button {
-    display: inline-block;
-    background: #28a745;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    padding: 15px 40px;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border: none;
-    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
-}
-
-.cta-button:hover {
-    background: #218838;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
-}
-
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 32px;
-    }
-
-    .cta-price {
-        font-size: 28px;
-    }
-    
-    .cta-text,
-    .cta-subtext {
-        font-size: 20px;
-    }
-    
-    .cta-heading {
-        font-size: 24px;
-    }
-    
-    .cta-button {
-        font-size: 20px;
-        padding: 12px 30px;
-    }
-}
-
     </style>
 </head>
 <body>
 
 <!-- Hero Section -->
 <section class="hero">
-    <div class="cta-box">
-        <h1 class="hero-title">D-Gassvit Energy Boost</h1>
-        <h2 class="cta-price">🎉 Harga Spesial Hari Ini!</h2>
-        <p class="cta-text">Pesan sekarang dan rasakan manfaatnya dalam waktu singkat.</p>
-        
-        <div class="countdown-timer">
-            <div class="countdown-item">
-                <span id="hours">15</span>
-                <span class="label">Jam</span>
-            </div>
-            <div class="countdown-item">
-                <span id="minutes">00</span>
-                <span class="label">Menit</span>
-            </div>
-            <div class="countdown-item">
-                <span id="seconds">00</span>
-                <span class="label">Detik</span>
-            </div>
-        </div>
-        
-        <h3 class="cta-heading">Hidup Sehat Dimulai dari Sini</h3>
-        <p class="cta-subtext">Klik tombol di bawah ini dan wujudkan kesehatan yang Anda impikan.</p>
-        
-        <a href="#order-section" class="cta-button">PESAN SEKARANG</a>
-    </div>
+    <h1 class="display-4">D-Gassvit Energy Boost</h1>
+    <p class="lead">Kembalikan Keseimbangan Hidup Anda dengan Sentuhan Alami</p>
+    <a href="#order-section" class="btn btn-lg cta-button">Pesan Disini</a>
 </section>
 
-<style>
-
-</style>
-
 <section class="image-section">
-    <img src="asset/gambar1.jpg" alt="Deskripsi Gambar 1" class="responsive-image">
+    <img src="../asset/gambar1.jpg" alt="Deskripsi Gambar 1" class="responsive-image">
 </section>
 
 
@@ -1207,106 +853,82 @@ select:disabled {
 <!-- Highlight Section -->
 <section class="highlight-section">
     <div class="highlight-box">
-        <h2 class="highlight-text">
-            <span class="highlight-main">Hidup sehat tidak lagi harus menjadi impian.</span><br>
-            <span class="highlight-sub">Dengan GASSVIT, Anda bisa kembali menikmati momen berharga bersama orang-orang tercinta tanpa rasa khawatir.</span>
-        </h2>
+        <h2 class="highlight-text"><strong>Hidup sehat tidak lagi harus menjadi impian. Dengan GASSVIT, Anda bisa kembali menikmati momen berharga bersama orang-orang tercinta tanpa rasa khawatir.
+        </strong></h2>
     </div>
 </section>
 
 <!-- Bagian Baru -->
 <section class="experience-section">
-    <h1 class="main-question" style="color: #ff4d4d; text-align: center; margin-bottom: 30px; font-size: 32px;">
-        <strong>❗ Apakah Anda Merasa Hidup Anda Mulai Terbatas karena penyakit? ❗</strong>
-    </h1>
-    
-    <h2 class="sub-question" style="color: #28a745; text-align: center; margin-bottom: 25px; font-size: 28px;">
-        <strong>Apakah ANDA SALAH SATUNYA yang mengalami hal ini❓</strong>
-    </h2>
-    
-    <ul class="symptom-list" style="list-style: none; padding: 0; max-width: 800px; margin: 0 auto;">
-        <li style="margin: 20px 0; font-size: 24px; color: #d63031; padding: 15px; 
-                   background-color: #fff; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-                   font-weight: bold;">
-            🌱 Berobat kemana mana tapi belum ada hasil
-        </li>
-        <li style="margin: 20px 0; font-size: 24px; color: #e17055; padding: 15px;
-                   background-color: #fff; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-                   font-weight: bold;">
-            🌱 Punya masalah pada tulang dan sendi
-        </li>
-        <li style="margin: 20px 0; font-size: 24px; color: #d63031; padding: 15px;
-                   background-color: #fff; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-                   font-weight: bold;">
-            🌱 Susah sholat, susah berdiri, susah jalan, susah duduk
-        </li>
-        <li style="margin: 20px 0; font-size: 24px; color: #e17055; padding: 15px;
-                   background-color: #fff; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-                   font-weight: bold;">
-            🌱 Asam urat, rematik, kebas, saraf kejepit, stroke, dll
-        </li>
-        <li style="margin: 20px 0; font-size: 24px; color: #d63031; padding: 15px;
-                   background-color: #fff; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-                   font-weight: bold;">
-            🌱 Khawatir akan risiko penyakit serius di masa depan?
-        </li>
+    <h1><strong>Apakah Anda Merasa Hidup Anda Mulai Terbatas karena penyakit ?
+    </strong></h1>
+    <h2>Apakah ANDA SALAH SATUNYA yang mengalami hal ini???</h2>
+    <ul>
+        <li>🌱 Berobat kemana mana tapi belum ada hasil</li>
+        <li>🌱 Punya masalah pada tulang dan sendi</li>
+        <li>🌱 Susah sholat, susah berdiri, susah jalan, susah duduk</li>
+        <li>🌱 Asam urat, rematik, kebas, saraf kejepit, stroke, dll</li>
+        <li>🌱 Khawatir akan risiko penyakit serius di masa depan?</li>
     </ul>
-    
-    <br>
-    <h1 style="color: #28a745; text-align: center; font-size: 32px; line-height: 1.5; 
-               margin-top: 30px; background-color: #f8f9fa; padding: 20px; border-radius: 10px;">
-        <strong>Kami memahami perjuangan Anda<br>
-        Tapi Anda tidak harus melewati ini sendirian.</strong>
-    </h1>
+    <br><br>
+    <h1 style="color: #28a745;"><strong> Kami memahami perjuangan Anda Tapi Anda tidak harus melewati ini sendirian.
+    </strong></h1>
 </section>
 
 <!-- Bagian Gambar di Atas Alert Section -->
 <section class="image-section">
-    <img src="asset/gambar2.jpg" alt="Deskripsi Gambar 2" class="responsive-image">
+    <img src="../asset/gambar2.jpg" alt="Deskripsi Gambar 2" class="responsive-image">
 </section>
 
 <section class="image-section">
-    <img src="asset/gambar3.jpg" alt="Deskripsi Gambar 3" class="responsive-image">
+    <img src="../asset/gambar3.jpg" alt="Deskripsi Gambar 3" class="responsive-image">
 </section>
 
 <section class="image-section">
-    <img src="asset/gambar4.jpg" alt="Deskripsi Gambar 4" class="responsive-image">
+    <img src="../asset/gambar4.jpg" alt="Deskripsi Gambar 4" class="responsive-image">
 </section>
 
 <section class="image-section">
-    <img src="asset/gambar5.jpg" alt="Deskripsi Gambar 5" class="responsive-image">
+    <img src="../asset/gambar5.jpg" alt="Deskripsi Gambar 5" class="responsive-image">
 </section>
 
 <section class="image-section">
-    <img src="asset/gambar6.jpg" alt="Deskripsi Gambar 6" class="responsive-image">
+    <img src="../asset/gambar6.jpg" alt="Deskripsi Gambar 6" class="responsive-image">
 </section>
 
 <!-- Bagian Baru -->
 <section class="alert-section">
+   
     <div class="alert-box">
-        <h3 class="alert-text">
-            <span class="alert-icon">🌿</span>
-            <span class="alert-main">Diracik dengan cinta dari alam</span>
-            <span class="alert-sub">untuk membantu Anda meraih hidup yang lebih baik.</span>
-        </h3>
+        <h3 class="alert-text"><strong>Diracik dengan cinta dari alam untuk membantu Anda meraih hidup yang lebih baik.
+        </strong></h3>
     </div>
 </section>
 
 <section class="image-section"></section>
-    <img src="asset/kandungan.jpg" alt="Deskripsi Gambar" class="responsive-image">
+    <img src="../asset/kandungan.jpg" alt="Deskripsi Gambar" class="responsive-image">
 </section>
 <section class="content-section"></section>
     
     <ul class="benefits-list">
         <li>
             <p><strong>MANFAAT KURMA</strong></p>
-            <img src="asset/benefits/gambar1.jpg" alt="Benefit 1" class="benefit-image"> 
+            <img src="../asset/benefits/gambar1.jpg" alt="Benefit 1" class="benefit-image"> 
+        </li>
+        <li>
+            <p><strong>MANFAAT MADU YAMAN</strong></p>
+            <img src="../asset/benefits/gambar2.jpg" alt="Benefit 2" class="benefit-image">
+        </li>
+        <li>
+            <p><strong>MANFAAT HABATUSSAUDA</strong></p>
+            <img src="../asset/benefits/gambar3.jpg" alt="Benefit 3" class="benefit-image"> 
+        </li>
+        <li>
+            <p><strong>MANFAAT ZAFARAN</strong> </p>
+            <img src="../asset/benefits/gambar4.jpg" alt="Benefit 4" class="benefit-image">
         </li>
     </ul>
 </section>
-
-
-
 
 <!-- Bagian Baru -->
 <section class="solution-section">
@@ -1316,7 +938,7 @@ select:disabled {
 
     <div class="video-grid">
         <?php
-        require_once('config.php');
+        require_once('../config.php');
         $query = "SELECT * FROM testimonials ORDER BY created_at DESC";
         $result = $conn->query($query);
         
@@ -1324,7 +946,7 @@ select:disabled {
         ?>
             <div class="video-container">
                 <video controls>
-                    <source src="<?= htmlspecialchars($testi['video_path']) ?>" type="video/mp4">
+                    <source src="../<?= htmlspecialchars($testi['video_path']) ?>" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <p><?= htmlspecialchars($testi['judul']) ?></p>
@@ -1338,77 +960,14 @@ select:disabled {
 
 
 
-<!-- Manfaat dan Cara Penggunaan Section -->
-<section class="benefits-section">
-    <div class="benefits-container">
-        <h2 class="benefits-title">✨ Manfaat Utama dari Gassvit ✨</h2>
-        
-        <div class="benefits-list">
-            <div class="benefit-item">
-                <span class="benefit-icon">🦴</span>
-                <p>Mengatasi masalah tulang, sendi dan saraf</p>
-            </div>
-            <div class="benefit-item">
-                <span class="benefit-icon">💪</span>
-                <p>Meningkatkan stamina dan memperbaiki sistem kekebalan tubuh</p>
-            </div>
-            <div class="benefit-item">
-                <span class="benefit-icon">🌟</span>
-                <p>Membantu mengatasi asam urat</p>
-            </div>
-            <div class="benefit-item">
-                <span class="benefit-icon">🏥</span>
-                <p>Membantu mengatasi Penyembuhan dan penyakit stroke</p>
-            </div>
-            <div class="benefit-item">
-                <span class="benefit-icon">🫁</span>
-                <p>Membantu penyembuhan Penderita asma dan sinusitis</p>
-            </div>
-            <div class="benefit-item">
-                <span class="benefit-icon">👄</span>
-                <p>Membantu penderita batuk dan radang tenggorkan</p>
-            </div>
-            <div class="benefit-item">
-                <span class="benefit-icon">🫀</span>
-                <p>Baik untuk menjaga kesehatan paru-paru</p>
-            </div>
-            <div class="benefit-item">
-                <span class="benefit-icon">❤️</span>
-                <p>Merawat pembulu arteri jantung</p>
-            </div>
-            <div class="benefit-item">
-                <span class="benefit-icon">🍯</span>
-                <p>Membantu penderita diabetes</p>
-            </div>
-        </div>
-
-        <div class="usage-section">
-            <h3 class="usage-title">📝 Cara Penggunaan</h3>
-            
-            <div class="usage-cards">
-                <div class="usage-card">
-                    <h4>Untuk Menjaga Kesehatan:</h4>
-                    <div class="usage-detail">
-                        <span class="usage-highlight">2x1</span>
-                        <p>setiap hari sesudah makan</p>
-                    </div>
-                </div>
-                
-                <div class="usage-card">
-                    <h4>Untuk Penyembuhan:</h4>
-                    <div class="usage-detail">
-                        <span class="usage-highlight">2x2</span>
-                        <p>setiap hari sesudah makan</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-info">
-                <span class="pill-icon">💊</span>
-                <p>1 botol berisi <strong>40 pil</strong></p>
-            </div>
-        </div>
+<!-- Bagian Baru -->
+<section class="miracle-section">
+    <div class="miracle-box">
+        <h2><strong>Manfaat Utama Dari Gassvit</strong></h2>
     </div>
+    <section class="image-section"></section>
+    <img src="../asset/gambar7.jpg" alt="Deskripsi Gambar" class="responsive-image">
+    </section>
 </section>
 
 
@@ -1442,13 +1001,13 @@ select:disabled {
 
 <section id="order-section" class="order-section">
     <h2>Silahkan Isi Formulir Dibawah ini Untuk Memulai Pemesanan</h2>
-    <form id="orderForm" method="post" action="proses_order.php">
+    <form id="orderForm" method="post" action="../proses_order.php">
         <div class="form-group">
             <label for="paket_order">Paket Order *</label>
             <select id="paket_order" name="paket-order" required>
                 <option value="">- Pilih Disini -</option>
                 <?php
-                require_once('config.php');
+                require_once('../config.php');
                 $query = "SELECT * FROM products ORDER BY jumlah_botol ASC";
                 $result = $conn->query($query);
                 while($row = $result->fetch_assoc()) {
@@ -1525,51 +1084,12 @@ select:disabled {
     </form>
 </section>
 
-
+<section class="image-section"></section>
+    <img src="../asset/gambar5.jpg" alt="Deskripsi Gambar" class="responsive-image">
+</section>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/rajaongkir.js"></script>
-
-<script>
-// Fungsi untuk mengatur countdown
-function startCountdown() {
-    // Cek apakah ada waktu tersimpan di localStorage
-    let endTime = localStorage.getItem('countdownEndTime');
-    
-    // Jika tidak ada atau sudah expired, set waktu baru (15 jam dari sekarang)
-    if (!endTime || new Date(endTime) < new Date()) {
-        endTime = new Date(new Date().getTime() + 15 * 60 * 60 * 1000); // 15 jam
-        localStorage.setItem('countdownEndTime', endTime);
-    }
-
-    // Update countdown setiap detik
-    const timer = setInterval(() => {
-        const now = new Date().getTime();
-        const distance = new Date(endTime) - now;
-
-        // Hitung jam, menit, dan detik
-        const hours = Math.floor(distance / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Update tampilan
-        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-
-        // Jika countdown selesai
-        if (distance < 0) {
-            clearInterval(timer);
-            // Reset countdown
-            localStorage.removeItem('countdownEndTime');
-            startCountdown();
-        }
-    }, 1000);
-}
-
-// Mulai countdown saat halaman dimuat
-document.addEventListener('DOMContentLoaded', startCountdown);
-</script>
+<script src="../js/rajaongkir.js"></script>
 
 </body>
 </html>
