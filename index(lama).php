@@ -394,7 +394,11 @@
     z-index: 1;
 }
 
-
+.benefits-list li p strong {
+    background: linear-gradient(45deg, #28a745, #34c759);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 .benefit-image {
     width: 100%;
@@ -594,6 +598,12 @@
     border-radius: 15px;
     border: 3px dashed #ff6347;
 }
+
+.arrow {
+            display: block;
+            margin: 10px 0;
+            color: #2C6055; /* Warna panah */
+        }
 
 .promo-box h2 {
     color: #ff6347;
@@ -975,80 +985,65 @@ select:disabled {
 
 .usage-section {
     margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    padding-top: 40px;
+    border-top: 2px dashed #28a745;
 }
 
 .usage-title {
-    grid-column: 1 / -1;
     text-align: center;
-    color: #FFA500;
+    color: #28a745;
     font-size: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.usage-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
 }
 
 .usage-card {
-    display: flex;
-    align-items: center;
-    padding: 15px;
     background: #f8f9fa;
+    padding: 20px;
     border-radius: 10px;
-    border-left: 4px solid #28a745;
-    transition: transform 0.3s ease;
-}
-
-.usage-card:hover {
-    transform: translateX(10px);
-}
-
-.usage-detail {
-    flex: 1;
+    text-align: center;
+    border: 2px solid #28a745;
 }
 
 .usage-card h4 {
     color: #28a745;
-    font-size: 18px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 20px;
 }
 
 .usage-highlight {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: bold;
     color: #28a745;
     display: block;
-    margin: 5px 0;
-}
-
-.usage-card p {
-    margin: 0;
-    font-size: 16px;
-    color: #666;
+    margin-bottom: 10px;
 }
 
 .product-info {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    background: #f8f9fa;
+    text-align: center;
+    background: #fff3cd;
+    padding: 20px;
     border-radius: 10px;
-    border-left: 4px solid #28a745;
-    transition: transform 0.3s ease;
-}
-
-.product-info:hover {
-    transform: translateX(10px);
+    margin-top: 30px;
+    border: 2px dashed #ff6347;
 }
 
 .pill-icon {
-    font-size: 24px;
-    margin-right: 15px;
+    font-size: 32px;
+    display: block;
+    margin-bottom: 10px;
 }
 
 .product-info p {
     margin: 0;
-    font-size: 16px;
-    color: #666;
+    font-size: 20px;
+    color: #444;
 }
 
 @media (max-width: 768px) {
@@ -1097,33 +1092,33 @@ select:disabled {
 }
 
 .cta-price {
-    color: #FFFF66;
+    color: #ff6347;
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 15px;
 }
 
 .cta-text {
-    color: #FFFF66;
+    color: #FFA500;
     font-size: 24px;
     margin-bottom: 25px;
 }
 
 .cta-divider {
     margin: 30px 0;
-    color: #ffffff;
+    color: #28a745;
     font-size: 24px;
 }
 
 .cta-heading {
-    color: #FF0000 ;
+    color: #d63031;
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 15px;
 }
 
 .cta-subtext {
-    color: #ffffff;
+    color: #FFA500;
     font-size: 22px;
     margin-bottom: 30px;
 }
@@ -1152,6 +1147,7 @@ select:disabled {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
 }
+
 @media (max-width: 768px) {
     .hero-title {
         font-size: 32px;
@@ -1176,245 +1172,12 @@ select:disabled {
     }
 }
 
-/* Add these new styles for colorful text */
-.hero-title {
-    background: linear-gradient(45deg, #28a745, #34c759);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: none;
-}
-
-
-.cta-text {
-    color: #2c3e50;
-    font-weight: 600;
-}
-
-
-
-
-.symptom-list li {
-    background: linear-gradient(45deg, #fff, #f8f9fa);
-    border-left: 5px solid;
-    border-image: linear-gradient(to bottom, #ff6347, #ff4d4d) 1;
-    transition: all 0.3s ease;
-}
-
-.symptom-list li:hover {
-    background: linear-gradient(45deg, #f8f9fa, #fff);
-    transform: translateX(10px);
-    box-shadow: 0 5px 15px rgba(255,77,77,0.2);
-}
-
-
-
-
-
-
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-/* Update existing countdown timer styles */
-.countdown-item {
-    background: linear-gradient(45deg, #28a745, #20c997);
-    border: 2px solid rgba(255,255,255,0.2);
-}
-
-.countdown-item span:first-child {
-    color: #fff;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-}
-
-.price-list li {
-    background: linear-gradient(45deg, #fff, #f8f9fa);
-    margin-bottom: 10px;
-    border-radius: 10px;
-    border-left: 5px solid #28a745;
-}
-
-
-
-/* Usage section styles - even smaller */
-.usage-box {
-    max-width: 200px;  /* Menyesuaikan dengan benefit-item */
-    margin: 8px auto;
-    padding: 12px;
-    border-radius: 10px;
-    background: linear-gradient(135deg, #fff, #f8f9fa);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-}
-
-.usage-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.usage-box h4 {
-    font-size: 0.95rem;
-    margin-bottom: 12px;
-    font-weight: 600;
-    background: linear-gradient(45deg, #28a745, #20c997);
-
-}
-
-.usage-box p {
-    font-size: 0.8rem;
-    color: #2c3e50;
-    margin-bottom: 10px;
-    line-height: 1.5;
-}
-
-.usage-box img {
-    max-width: 45px;
-    height: auto;
-    margin-bottom: 15px;
-}
-
-.animated-arrow {
-    font-size: 100px;
-    margin: 20px 0;
-    animation: colorChange 2s infinite, bounce 1s infinite;
-}
-
-@keyframes colorChange {
-    0% { color: #28a745; }
-    25% { color: #ff6347; }
-    50% { color: #007bff; }
-    75% { color: #ffc107; }
-    100% { color: #28a745; }
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-20px);
-    }
-    60% {
-        transform: translateY(-10px);
-    }
-}
-
-.rainbow-button {
-    animation: rainbowEffect 5s linear infinite;
-    background-size: 200% auto;
-    transition: all 0.3s ease;
-}
-
-@keyframes rainbowEffect {
-    0% {
-        background: #28a745;
-    }
-    20% {
-        background: #007bff;
-    }
-    40% {
-        background: #6f42c1;
-    }
-    60% {
-        background: #e83e8c;
-    }
-    80% {
-        background: #fd7e14;
-    }
-    100% {
-        background: #28a745;
-    }
-}
-
-.rainbow-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    animation: rainbowEffect 2s linear infinite;
-}
-
-.arrow-container {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    margin: 40px 0 100px 0; /* Menambah margin bottom menjadi 100px */
-}
-
-.arrow_box {
-    position: relative;
-    background: #28a745;
-    border: 8px solid #20c997; /* Memperbesar border */
-    width: 60px; /* Memperbesar lebar */
-    height: 200px; /* Memperbesar tinggi */
-    animation: colorChangeArrow 2s infinite, bounceArrow 1s infinite;
-}
-
-.arrow_box:after, .arrow_box:before {
-    top: 100%;
-    left: 50%;
-    border: solid transparent;
-    content: "";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-}
-
-.arrow_box:after {
-    border-color: rgba(40, 167, 69, 0);
-    border-top-color: inherit;
-    border-width: 60px; /* Memperbesar ukuran ujung panah */
-    margin-left: -60px;
-}
-
-.arrow_box:before {
-    border-color: rgba(32, 201, 151, 0);
-    border-top-color: #20c997;
-    border-width: 70px; /* Memperbesar ukuran border ujung panah */
-    margin-left: -70px;
-}
-
-@keyframes colorChangeArrow {
-    0% { 
-        background: #28a745;
-        border-color: #20c997;
-    }
-    25% { 
-        background: #007bff;
-        border-color: #0056b3;
-    }
-    50% { 
-        background: #6f42c1;
-        border-color: #563d7c;
-    }
-    75% { 
-        background: #e83e8c;
-        border-color: #d91a72;
-    }
-    100% { 
-        background: #28a745;
-        border-color: #20c997;
-    }
-}
-
-@keyframes bounceArrow {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-20px);
-    }
-    60% {
-        transform: translateY(-10px);
-    }
-}
-
     </style>
 </head>
 <body>
 
 <!-- Hero Section -->
+
 
 
 
@@ -1429,7 +1192,7 @@ select:disabled {
     <div class="highlight-box">
         <h2 class="highlight-text">
             <span class="highlight-main">Hidup sehat tidak lagi harus menjadi impian.</span><br>
-            <span class="highlight-sub">Dengan D-GASSVIT, Anda bisa kembali menikmati momen berharga bersama orang-orang tercinta tanpa rasa khawatir.</span>
+            <span class="highlight-sub">Dengan GASSVIT, Anda bisa kembali menikmati momen berharga bersama orang-orang tercinta tanpa rasa khawatir.</span>
         </h2>
     </div>
 </section>
@@ -1479,12 +1242,7 @@ select:disabled {
         <strong style="color: #d63031;">SEBELUM MENYESAL❗❗</strong>
     </h1>
 </section>
-<div style="text-align: center; margin-top: 40px;">
-    <!-- Menggunakan Font Awesome -->
-    <a href="#order-section" class="cta-button rainbow-button" style="display: inline-block; text-decoration: none;">
-        ORDER DISINI
-    </a>
-</div>
+
 <!-- Bagian Gambar di Atas Alert Section -->
 <section class="image-section">
     <img src="asset/gambar2.jpg" alt="Deskripsi Gambar 2" class="responsive-image">
@@ -1524,10 +1282,11 @@ select:disabled {
 
 
 
+
 <!-- Bagian Baru -->
 <section class="solution-section">
     <div class="solution-box">
-        <h2><strong>Cerita Mereka yang Sudah Merasakan Manfaat D-Gassvit</strong></h2>
+        <h2><strong>Cerita Mereka yang Sudah Merasakan Manfaat Gassvit</strong></h2>
     </div>
 
     <div class="video-grid">
@@ -1550,14 +1309,6 @@ select:disabled {
             </div>
         <?php endwhile; ?>
     </div>
-
-    <div style="text-align: center; margin-top: 40px;">
-        <!-- Menggunakan Font Awesome -->
-
-        <a href="#order-section" class="cta-button rainbow-button" style="display: inline-block; text-decoration: none;">
-            ORDER DISINI
-        </a>
-    </div>
 </section>
 
 
@@ -1565,10 +1316,8 @@ select:disabled {
 <!-- Manfaat dan Cara Penggunaan Section -->
 <section class="benefits-section">
     <div class="benefits-container">
-        <h1 class="benefits-title">✨ Manfaat Utama dari 
-             D-Gassvit ✨</h1>
+        <h2 class="benefits-title">✨ Manfaat Utama dari Gassvit ✨</h2>
         
-
         <div class="benefits-list">
             <div class="benefit-item">
                 <span class="benefit-icon">🦴</span>
@@ -1576,59 +1325,62 @@ select:disabled {
             </div>
             <div class="benefit-item">
                 <span class="benefit-icon">💪</span>
-                <p style="color: #f5f5f5;">Meningkatkan stamina dan memperbaiki sistem kekebalan tubuh</p>
+                <p>Meningkatkan stamina dan memperbaiki sistem kekebalan tubuh</p>
             </div>
             <div class="benefit-item">
                 <span class="benefit-icon">🌟</span>
-                <p style="color: #f5f5f5;">Membantu mengatasi asam urat</p>
+                <p>Membantu mengatasi asam urat</p>
             </div>
             <div class="benefit-item">
                 <span class="benefit-icon">🏥</span>
-                <p style="color: #f5f5f5;">Membantu mengatasi Penyembuhan dan penyakit stroke</p>
+                <p>Membantu mengatasi Penyembuhan dan penyakit stroke</p>
             </div>
             <div class="benefit-item">
-                <span class="benefit-icon">👃</span>
-                <p style="color: #f5f5f5;">Membantu penyembuhan Penderita asma dan sinusitis</p>
+                <span class="benefit-icon">🫁</span>
+                <p>Membantu penyembuhan Penderita asma dan sinusitis</p>
             </div>
             <div class="benefit-item">
                 <span class="benefit-icon">👄</span>
-                <p style="color: #f5f5f5;">Membantu penderita batuk dan radang tenggorokan</p>
+                <p>Membantu penderita batuk dan radang tenggorkan</p>
             </div>
             <div class="benefit-item">
-                <span class="benefit-icon">🦾</span>
-                <p style="color: #f5f5f5;">Baik untuk menjaga kesehatan paru-paru</p>
+                <span class="benefit-icon">🫀</span>
+                <p>Baik untuk menjaga kesehatan paru-paru</p>
             </div>
             <div class="benefit-item">
                 <span class="benefit-icon">❤️</span>
-                <p style="color: #f5f5f5;">Merawat pembulu arteri jantung</p>
+                <p>Merawat pembulu arteri jantung</p>
             </div>
             <div class="benefit-item">
                 <span class="benefit-icon">🍯</span>
-                <p style="color: #f5f5f5;">Membantu penderita diabetes</p>
+                <p>Membantu penderita diabetes</p>
             </div>
         </div>
 
         <div class="usage-section">
             <h3 class="usage-title">📝 Cara Penggunaan</h3>
             
-            <div class="benefits-list" style="grid-template-columns: 1fr;">
-                <div class="benefit-item">
-                    <span class="benefit-icon">💊</span>
-                    <p style="color: #f5f5f5;"><strong>Untuk Menjaga Kesehatan:</strong><br>
-                    2x1 setiap hari sesudah makan</p>
+            <div class="usage-cards">
+                <div class="usage-card">
+                    <h4>Untuk Menjaga Kesehatan:</h4>
+                    <div class="usage-detail">
+                        <span class="usage-highlight">2x1</span>
+                        <p>setiap hari sesudah makan</p>
+                    </div>
                 </div>
                 
-                <div class="benefit-item">
-                    <span class="benefit-icon">💊</span>
-                    <p style="color: #f5f5f5;"><strong>Untuk Penyembuhan:</strong><br>
-                    2x2 setiap hari sesudah makan</p>
+                <div class="usage-card">
+                    <h4>Untuk Penyembuhan:</h4>
+                    <div class="usage-detail">
+                        <span class="usage-highlight">2x2</span>
+                        <p>setiap hari sesudah makan</p>
+                    </div>
                 </div>
+            </div>
 
-                <div class="benefit-item">
-                    <span class="benefit-icon">💊</span>
-                    <p style="color: #f5f5f5;"><strong>Isi Kemasan:</strong><br>
-                    1 botol berisi 40 pil</p>
-                </div>
+            <div class="product-info">
+                <span class="pill-icon">💊</span>
+                <p>1 botol berisi <strong>40 pil</strong></p>
             </div>
         </div>
     </div>
@@ -1643,17 +1395,11 @@ select:disabled {
 </section>
 
 
-
-<!-- Bagian Harga -->
-
-    
-
-
-    <section class="hero">
+<section class="hero">
     <div class="cta-box">
         
         <h2 class="cta-price">🎉 Harga Spesial Hari Ini!</h2>
-        <p class="cta-text" style="color: #f5f5f5;">Pesan sekarang dan rasakan manfaatnya dalam waktu singkat.</p>
+        <p class="cta-text">Pesan sekarang dan rasakan manfaatnya dalam waktu singkat.</p>
         
         <ul class="price-list">
             <li class="border-bottom"><span class="checkmark">✔️</span> 1 Botol Rp 300.000</li>
@@ -1663,26 +1409,18 @@ select:disabled {
         
         <h3 class="cta-heading">JANGAN SEPELEKAN❕</h3>
         <p class="cta-subtext">Bila tidak segera ditangani sakit Anda semakin berat</p>
-        
-        
-        
+
         <a href="#order-section" class="cta-button">Isi Formulir untuk dapatkan harga sepesial</a>
-        
-        
-    
     </div>
 </section>
 
 
-<div class="arrow-container">
-    <div class="arrow_box"></div>
-    <div class="arrow_box"></div>
-    <div class="arrow_box"></div>
-</div>
+
+
 
 
 <section id="order-section" class="order-section">
-    <h2>Formulir</h2>
+    <h2><strong>FORMULIR</strong> </h2>
     <form id="orderForm" method="post" action="proses_order.php">
         <div class="form-group">
             <label for="paket_order">Paket Order *</label>
@@ -1762,7 +1500,7 @@ select:disabled {
         <input type="hidden" name="total_berat" value="1000">
         <input type="hidden" name="total_pembayaran" value="0">
 
-        <button type="submit" class="cta-button">selanjutnya</button>
+        <button type="submit" class="cta-button1">Selanjutnya</button>
     </form>
 </section>
 
