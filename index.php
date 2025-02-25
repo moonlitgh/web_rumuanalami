@@ -950,6 +950,8 @@ select:disabled {
 
 .benefit-item {
     display: flex;
+    width: 300px;
+    margin-left: -35px;
     align-items: center;
     padding: 15px;
     background: #FFA500;
